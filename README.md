@@ -148,16 +148,3 @@ Waveform analysis was used to verify:
 - Branch target computation
 - PC update behavior
 
----
-
-## Project Structure
-
-```text
-RISC-V-Single-Cycle-CPU/
-│
-├── README.md
-├── src/
-├── tb/
-├── docs/
-├── simulations/
-└── images/
