@@ -20,8 +20,15 @@ initial begin
         register_file[i]= 32'b0;
     end
 end
-
+    
+// The two assign statements below are different for a pipelined CPU which I have done in another repo.
 assign rd1=(rs1==5'b0)?32'b0:register_file[rs1];
 assign rd2=(rs2==5'b0)?32'b0:register_file[rs2];
 
 endmodule
+
+// Assign statements for Pipelined version of the CPU
+//   assign rd1 = (rs1==5'b0) ? 32'b0:
+//      ((write_en && (rd == rs1)) ? write_data : register_file[rs1]);
+//   assign rd2 = (rs2==5'b0) ? 32'b0:
+//      ((write_en && (rd == rs2)) ? write_data : register_file[rs2]);
